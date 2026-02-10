@@ -29,5 +29,3 @@ JavaScript-Array/
 ## If you like this project
 Give it a ⭐ on GitHub 
 
-## Live Demo
-https://mohd-fardeen-khan.github.io/JavaScript-Array/
