@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <h1>JavaScript Array Lesson</h1>
+    <p>Array is <b>Linear Data structure</b> which means its a collection of <b>similar data types</b> stored in contiguous memory locations.But in <b>JavaScript</b> we can store <b>different data types</b> in an array.that's why its called as <em>Heterogeneous data structure.</em>
+    </p>
+
+    <br>
+    
+    <table border="1">
+        <caption>SEM V</caption>
+        <tr>
+            <th colspan="5">Mohd fardeen Khan Result</th>
+        </tr>
+        <tr>
+            <th>Subject</th>
+            <th>External</th>
+            <th>Internal</th>
+            <th>Practical</th>
+            <th>TOTAL</th>
+        </tr>
+        <tr>
+            <th>SPD</th>
+            <td>67</td>
+            <td>25</td>
+            <td>49</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <th>IOT</th>
+            <td>45</td>
+            <td>25</td>
+            <td>49</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <th>AWD</th>
+            <td>58</td>
+            <td>25</td>
+            <td>49</td>
+            <td>83</td>
+        </tr>
+        <tr>
+            <th>AI</th>
+            <td>65</td>
+            <td>25</td>
+            <td>36</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <th>AJ</th>
+            <td>42</td>
+            <td>19</td>
+            <td>40</td>
+            <td>61</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    <b><p style="text-align: center;">CGPA OF SEM V IS : 9.30</p></b>
+    
+    <hr><br>
+
+    <h2><u>Mutable</u></h2>&nbsp;
+    
+    <p>In JavaScript Arrays are <strong>Mutable</strong> means if i'll go to the index value and change it then it change in the array in normal it doesn't change anything but in JS it does. If the Array is 4 index and if we change in the for Eg: <code>fruits[10]="papaya"</code> then it shows the length of the index 11 but in b/w it'll shows empty * 8 demo
+     <code>
+        let fruits=["Mango","Apple"];
+        console.log(fruits)
+        Output: (2) ['Mango', 'Apple']
+        fruits[0]="Banana";
+        Output: (2) ['Banana', 'Apple']
+        fruits[10]="Banana";
+        Output: (11) ['Banana', 'Apple', empty × 8, 'Lithchi']
+    </code>
+    In simple words mutable is when we change the value of the array it get changed in the <b>original array.</b>
+    </p>
+    
+    <hr>
+    <br>
+
+    <h2><u>Array Methods</u></h2>&nbsp; 
+    <strong><p>1. Push Method:</strong> Add to end</p>
+    <p>in push method we can add the value or some elements can be added in the End for eg.
+        <code>
+            let cars=["Audi","BMW","Maruti","Lamborgini"];
+            console.log(cars);
+            Output: (4) ['Audi', 'BMW', 'Maruti', 'Lamborgini']
+            cars.push("Toyota");
+            console.log(cars);
+            Output: (5) ['Audi', 'BMW', 'Maruti', 'Lamborgini', 'Toyota']
+            cars.push("Ferrari");
+            console.log(cars);
+            Output: (6) ['Audi', 'BMW', 'Maruti', 'Lamborgini', 'Toyota', 'Ferrari']
+        </code>
+    </p>
+
+    <br>
+    
+    <strong><p>2. Pop Method:</strong> Remove from end & returns it </p>
+    <p>in pop method we can remove the value or some elements can be removed in the End or the value(index) which we can be tell in the time for running for eg.
+        <code>
+            let cars=["Audi","BMW","Maruti","Lamborgini"];
+            console.log(cars);
+            Output: (4) ['Audi', 'BMW', 'Maruti', 'Lamborgini']
+            cars.pop();
+            console.log(cars);
+            Output: (3) ['Audi', 'BMW', 'Maruti']
+            cars.pop();
+            console.log(cars);
+            Output: (2) ['Audi', 'BMW']
+        </code>
+    </p>
+    
+    <br>
+    
+    <strong><p>3. Unshift Method:</strong>Add to start</p>
+    <p>in Unshift method we can add the value or some elements can be added in the start of the element which we can be tell in the time for running for eg.
+        <code>
+            let fruits=["Banana","Apple"];
+            console.log(fruits);
+            Output: (2) ['Banana', 'Apple']
+            fruits.unshift("Mango");
+            console.log(fruits);
+            Output: (3) ['Mango', 'Banana', 'Apple']
+        </code>
+    </p>
+
+     <br>
+    
+    <strong><p>4. Shift Method:</strong>Delete from start</p>
+    <p>in shift method we can Delete or return the value or some elements can be delete in the start of the element which we can be tell in the time for running for eg.
+        <code>
+            let fruits=["Banana","Apple"];
+            console.log(fruits);
+            Output: (2) ['Banana', 'Apple']
+            fruits.shift();
+            console.log(fruits);
+            Output: ['Apple']
+        </code>
+    </p>
+
+    <br>
+    
+    <strong><p>5. indexOf  OR includes Methods:</strong>Returns index of something</p>
+    <p>To find out or search something in the strings or  <b> Array</b> we can ifnd using the method of <b>indexOf</b> 
+        if indexOf method find the value then it return it index value and if indexOf method doesn't find / not foundthe value or striing then it return the -1 and we have to search exact value or words because it's case sensitive. <b> includes method</b> means it is also find somthing but it shows boolean value like true or false .
+        <code>
+            let primary =["Red", "Yellow", "Blue"];
+            console.log(primary);
+            Output: (3) ['Red', 'Yellow', 'Blue']
+            primary.indexOf("Yellow");
+            <output>Output: 1</output>
+            primary.indexOf("green");
+            <output>Output: -1</output>
+            primary.indexOf("yellow");
+            <output>Output: -1</output>
+            &nbsp;
+            primary.includes("Yellow");
+            <output>Output: true</output>
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>6. concat Methods:</strong>Merge two arrays</p>
+    <p>when we have to merge two arrays we can use the concat method because it's not merge two array by using the '+' this for example when we write the first array then concat second array in is second in simple words which array we writefirst is going to first preference and other one get second preference.
+        <code>
+            let primary =["Red", "Yellow", "Blue"];
+            console.log(primary);
+            <output>Output: (3) ['Red', 'Yellow', 'Blue']</output>
+            let secondary = ["WHitesmoke", "Green", "Violet"];
+            console.log(secondary);
+            <output>Output: (3) ['WHitesmoke', 'Green', 'Violet']</output>
+            primary.concat(secondary);              //in console
+            let allColors = primary.concat(secondary);
+            console.log(allColors);
+            <output>Output: (6) ['Red', 'Yellow', 'Blue', 'WHitesmoke', 'Green', 'Violet']</output>
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>7. reverse Methods:</strong>Reverse an arrays</p>
+    <p>in reverse Method we can Reverse the array in complete opposite and it also reverse real array if we want to make previou type then we have to do again reverse means it change the original array.
+        <code>
+            let primary =["Red", "Yellow", "Blue"];
+            console.log(primary);
+            <output>Output: (3) ['Red', 'Yellow', 'Blue']</output>
+            primary.reverse();
+            console.log(primary);
+            <output>Output: (3) ['Blue', 'Yellow', 'Red']</output>
+            primary.reverse();
+            console.log(primary);
+            <output>Output: (3) ['Red', 'Yellow', 'Blue']</output>
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>8. slice Methods:</strong>copies a portion of an array</p>
+    <p>If we want something from an array between the array then it get using the slice methodand it gives the portion of array if we only write slice then it give whole array and if we write the slice method with one number then it provide the array from that index to end index value and if we write the slice method with 2 numbers then it give the value from 1 number index to 2 number index but in this it doesn't include last one index it exclude the last index value when we pass the negative value then it give the answer from last value of array.
+        <code>
+            let primary =["Red", "Yellow", "Blue"];
+            console.log(primary);
+            <output>Output: (3) ['Red', 'Yellow', 'Blue']</output>
+            primary.slice();
+            <output>Output: (3) ['Red', 'Yellow', 'Blue']</output>
+            primary.slice(2);
+            <output>Output: ['Blue']</output>
+            primary.slice(0,2);
+            <output>Output: (2) ['Red', 'Yellow']</output>
+            primary.slice(-2);
+            <output>Output: (2) ['Yellow', 'Blue']</output>
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>9. splice Methods:</strong>removes / replace / add new items in array</p>
+    <p>splice methods means it is a all of the method where we can remove, replace and add a item in array we give only one index value where we can remove, place or add the element it changes in original array.
+        <code>
+            let colors = ["red", "yellow", "green", "white", "pink", "grey"];
+            console.log(colors);
+            <output> Output : (6) ['red', 'yellow', 'green', 'white', 'pink', 'grey']</output>
+            colors.splice(4);
+            <Output>(2) ['pink', 'grey']</Output>
+            colors.splice(0,1);
+            Output :['red']
+            console.log(colors)
+            Output :(3) ['yellow', 'green', 'white']
+            colors.splice(0,1, "black", "smoke");
+            Output: ['red']
+            console.log(colors)
+            Output: (5) ['black', 'smoke', 'yellow', 'green', 'white']
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>10. sort Methods:</strong>Sort an array </p>
+    <p>Whenever we want to sort some array in ascending or descending array then we can use sort method sort doesn't apply same in numbers in sort methods it convert the number in alphabet or string then it shows like that
+        <code>
+            let colors = ["red", "yellow", "green", "white"];
+            console.log(colors);
+            <output> Output : (6) ['red', 'yellow', 'green', 'white']</output>
+            colors.sort();
+            Output: (4) ['green', 'red', 'white', 'yellow']
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>11. Array Reference Methods:</strong>Address of an array in memory</p>
+    <p>Whenever array creates in js then it Reference variable create and it stores the address of the variable where it stores the values.
+        <code>
+            let num = [1,2,3];  // num is the Reference variable means num variable knows where my values is store. it doesn't stores value it store there address.
+            let arr = ['a','b'];
+            undefined
+            let arrcopy = arr;
+            undefined
+            arrcopy
+            (2) ['a', 'b']
+            arrcopy.push('c');
+            3
+            arr
+            (3) ['a', 'b', 'c']
+            arr == arrcopy
+            true
+            arr === arrcopy
+            true
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>12. constant array Methods:</strong>give the constant variable</p>
+    <p>when we want to make the variable constant of array then it is possible to give using const keyword and const means it doesn't change the values it does change and remove the value from array but doesn't convert the array completely.
+        <code>
+            let arr = [1,2,3,4,5];
+            console.log(arr);
+            Output: (5) [1, 2, 3, 4, 5]
+            const arr = [5,4,3,2,1];
+            Output: (5) [5, 4, 3, 2, 1]
+            arr.push(10);
+            6
+            arr
+            (6) [5, 4, 3, 2, 1, 10]
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>13. Nested array Methods:</strong>array in arrays</p>
+    <p>we can create multi dimensional array inside the array here called nested arrays. whenever we want to call some value then we write firs row no. then second col no. num[row][col] , num[0][0]  it gives the value of 1 index of 0 
+        <code>
+            let num = [[1,2], [3,4], [5,6], [7,8] ,[9,0]];
+            undefined
+            num
+            (5) [Array(2), Array(2), Array(2), Array(2), Array(2)]0: (2) [1, 2]1: (2) [3, 4]2: (2) [5, 6]3: (2) [7, 8]4: (2) [9, 0]length: 5[[Prototype]]: Array(0)
+            num.length
+            5
+            num(0)
+            VM5865:1 Uncaught TypeError: num is not a function
+                at <anonymous>:1:1
+            (anonymous) @ VM5865:1Understand this error
+            num[0];
+            (2) [1, 2]
+            num[0].length
+            2
+            num[0][0];
+            1
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>14. Practice Qs</strong>2d array of tic -toe game</p>
+    <p> Game of tic-toe where we make a 2d game 
+        <code>
+            let tic_toe = [['X','NULL','0'],['NULL','X','NULL'],['0','NULL','X']]
+            console.log(tic_toe);
+            (3) [Array(3), Array(3), Array(3)]
+            0: (3) ['X', 'null', '0']
+            1: (3) ['null', 'X', 'null']
+            2: (3) ['0', 'null', 'X']
+            length: 3
+            [[Prototype]]: Array(0)
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>15. map() </strong></p>
+    <p> Takes an array , Changes each element, Returns a new array, Original array stays same
+        <code>
+            let nums = [1, 2, 3, 4];
+            let result = nums.map(function(n) {
+              return n * n;
+            });
+            console.log(result); // [1, 4, 9, 16]
+            Output: (4) [1, 4, 9, 16]
+
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>16. filter() </strong></p>
+    <p> Checks a condition, Keeps only elements that are true, Returns a new array
+        <code>
+            let nums = [1, 2, 3, 4, 5, 6];
+            let even = nums.filter(n => n % 2 === 0);       
+            console.log(even); // [2, 4, 6]
+            Output: (3) [2, 4, 6]       
+
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>17. reduce() </strong></p>
+    <p> Combines all elements into one value, Example: sum, total, max, count
+        <code>
+            let nums = [10, 20, 30];
+            let sum = nums.reduce((total, n) => {
+              return total + n;
+            }, 0);
+            console.log(sum); // 60
+            Output: 60    
+
+        </code>
+    </p>
+
+    <br>
+
+    <strong><p>18. JAVASCRIPT ARRAY CHEAT SHEET (SAVE THIS 📌)</strong></p>
+    <p> 
+        <code>
+        // Create an array
+        let arr = [1,2,3];
+        
+        // Add
+        arr.push(4);       // end
+        arr.unshift(0);    // start
+                
+        // Remove
+        arr.pop();         // end
+        arr.shift();       // start
+                
+        // Length
+        arr.length;
+                
+        // Map
+        arr.map(x => x*2);
+                
+        // Filter
+        arr.filter(x => x > 5);
+                
+        // Reduce
+        arr.reduce((a,b) => a+b, 0);
+                
+        // Check value
+        arr.includes(3);
+                
+        // Reverse
+        arr.reverse();
+                
+        // Remove duplicates
+        [...new Set(arr)];
+        </code>
+    </p>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
