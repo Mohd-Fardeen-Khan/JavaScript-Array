@@ -1,3 +1,14 @@
+/*
+  style.css
+  This file is used for styling the HTML elements
+  of the JavaScript Array project.
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     font-family: Arial, sans-serif;
     background-color: #a39e9e;

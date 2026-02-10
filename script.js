@@ -1,3 +1,9 @@
+/*
+  script.js
+  This file contains the JavaScript logic of the project.
+  Here we write and test array concepts and operations.
+*/
+
 let subject=["SPD","IOT","AWD","AI","AJ","p1","p2","p3","p4","p5"];
 console.log(subject);
 let marks=[67,45,58,65,42,49,49,49,36,40];
